@@ -1,0 +1,42 @@
+<header class="w-100 flex justify-content-center shadow-sm">
+  <div class="w-default flex justify-content-space-between">
+    <p>DINESH</p>
+    <ul>
+      <li
+        class="py-1 px-3"
+        [ngClass]="active === 'home' ? 'active' : ''"
+        (click)="scrollFunc('home')"
+      >
+        Home
+      </li>
+      <li
+        class="py-1 px-3"
+        [ngClass]="active === 'about' ? 'active' : ''"
+        (click)="scrollFunc('about')"
+      >
+        About
+      </li>
+      <li
+        class="py-1 px-3"
+        [ngClass]="active === 'skills' ? 'active' : ''"
+        (click)="scrollFunc('skills')"
+      >
+        Skills
+      </li>
+      <li
+        class="py-1 px-3"
+        [ngClass]="active === 'qualifications' ? 'active' : ''"
+        (click)="scrollFunc('qualifications')"
+      >
+        Qualifications
+      </li>
+      <li
+        class="py-1 px-3"
+        [ngClass]="active === 'contactme' ? 'active' : ''"
+        (click)="scrollFunc('contactme')"
+      >
+        Contact Me
+      </li>
+    </ul>
+  </div>
+</header>

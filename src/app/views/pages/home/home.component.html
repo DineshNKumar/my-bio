@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+
+<main id="home" class="w-100 flex justify-content-center">
+  <div class="w-default">
+
+    <!-- Banner -->
+    <div class="mt-8 overflow-hidden home-content">
+      <section class="pr-4" >
+        <section class="social-icons mb-4">
+          <span><fa-icon [icon]="linkedIn"></fa-icon></span>
+          <span><fa-icon [icon]="github"></fa-icon></span>
+          <span><fa-icon [icon]="whatsapp"></fa-icon></span>
+        </section>
+
+        <p class="name my-0" style="line-height: 0.7">Hi, I'm Dinesh</p>
+        <p>Full Stack Developer.</p>
+        <article>
+          <p class="para" style="word-spacing: 4px; line-height: 1.5; text-align: justify;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Good exeprience in
+            <abbr title="MongoDB, Express, Angular, Node JS"><b>MEAN</b></abbr>
+            &
+            <abbr title="MongoDB, Express, React JS, Node JS"><b>MERN</b></abbr>
+            Full Stack Development for developing quality work. Have also a good
+            know in <b>Spring Boot Framework</b> for backend development with
+            MySQL and MongoDB. Successfully worked on many projects with
+            different technologies such as <b>NextJS</b>(For frontend and
+            backend.), <b>NestJS</b>(For backend only.)
+          </p>
+        </article>
+        <button class="btn">Contact Me <fa-icon [icon]="contactMe"></fa-icon></button>
+      </section>
+      <section>
+        <img
+          src="/assets/images/dinesh.png"
+          alt="My Image"
+          class="w-100"
+        />
+      </section>
+    </div>
+
+    <!-- ABout Me Page -->
+    <app-about></app-about>
+
+    <!-- Skills -->
+    <app-skills></app-skills>
+
+    <!-- Qualifications -->
+    <app-qualifications></app-qualifications>
+
+    <!-- Contact me -->
+    <app-contactme></app-contactme>
+  </div>
+</main>
+
+<app-footer></app-footer>
+

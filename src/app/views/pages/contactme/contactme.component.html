@@ -1,0 +1,83 @@
+<div class="contactme mt-8" id="contactme">
+  <p class="title">Contct Me</p>
+  <p class="sub-title">Get in touch with me</p>
+
+  <div class="form">
+    <section class="text-center">
+      <div>
+        <h3><fa-icon [icon]="phone"></fa-icon> Call me</h3>
+        <p>8171957605</p>
+      </div>
+      <div>
+        <h3><fa-icon [icon]="emailIcon"></fa-icon> Email</h3>
+        <p>dnkumar0510@gmail.com</p>
+      </div>
+      <div>
+        <h3><fa-icon [icon]="locationIcon"></fa-icon> Location</h3>
+        <p>Agra, UP(283105)</p>
+      </div>
+    </section>
+    <section>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+          <section [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              required
+              minlength="3"
+              formControlName="name"
+            />
+          </section>
+          <section [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+            <label for="email">Email</label>
+            <input type="email" id="email" required formControlName="email" />
+          </section>
+        </div>
+        <div [ngClass]="{ 'is-invalid': submitted && f['project'].errors }">
+          <label for="project">Project</label>
+          <input
+            type="text"
+            minlength="3"
+            id="project"
+            required
+            formControlName="project"
+          />
+        </div>
+        <div [ngClass]="{ 'is-invalid': submitted && f['message'].errors }">
+          <label for="message">Message</label>
+          <textarea
+            rows="5"
+            cols="33"
+            id="message"
+            required
+            minlength="5"
+            formControlName="message"
+          >
+          </textarea>
+        </div>
+        <p
+          [ngStyle]="{ display: isError ? 'block' : 'none' }"
+          class="mb-0"
+          style="color: #f72585; font-size: 12px"
+        >
+          Please fill all Required Fields
+        </p>
+        <p
+          [ngStyle]="{ display: isSuccess ? 'block' : 'none' }"
+          class="mb-0"
+          style="color: #50c878; font-size: 12px; font-weight: bold"
+        >
+          Your Data Successfully Sent!
+        </p>
+
+        <button class="btn" type="submit" [disabled]="submitted">
+          Send <fa-icon [icon]="sendIcon"></fa-icon>
+        </button>
+      </form>
+    </section>
+  </div>
+</div>
+
+

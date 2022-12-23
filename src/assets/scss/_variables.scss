@@ -1,0 +1,55 @@
+$red: #F72585;
+$blue: #4361EE;
+$purple: #7209B7;
+$cyan: #4CC9F0;
+$indigo: #3A0CA3;
+
+// Bootstrap colors
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #7987a1 !default;
+$gray-700: #495057 !default;
+$gray-800: #212a3a !default;
+$gray-900: #060c17 !default;
+$black: #000 !default;
+$text-muted: $gray-600 !default;
+
+$danger: $red !default;
+$primary: $blue !default;
+$info: $cyan !default;
+
+// ** Button
+$input-btn-padding-y: .8rem !default;
+$input-btn-padding-x: 1rem !default;
+
+$title-size: 40px;
+
+// Spaces vars
+$spaces: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 32px,
+    6: 48px,
+    7: 64px,
+    8: 80px,
+    9: 96px,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%
+);
+
+$default-width: 75%;
+
+// Shadows
+$sm-box-shadow: 0 0 10px 0 $gray-200;
+
+// ** Text
+$text-color: #1d3557;

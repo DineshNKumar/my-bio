@@ -1,0 +1,103 @@
+.text-center {
+    text-align: center;
+}
+
+// Overflow values
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.btn {
+    font-size: 20px;
+    padding: $input-btn-padding-y $input-btn-padding-x;
+    color: $gray-200;
+    background-color: $primary;
+    border: none;
+    font-family: inherit;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0;
+    svg {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background-color: darken($primary, $amount: 20%);
+        margin-left: 5px;
+    }
+}
+
+// Shadows
+.shadow-sm {
+    box-shadow: $sm-box-shadow;
+}
+
+.text-muted {
+    color: $text-muted !important;
+}
+.white {
+    color: white !important;
+}
+.gray-100 {
+    color: $gray-100 !important;
+}
+.gray-200 {
+    color: $gray-200 !important;
+}
+.gray-300 {
+    color: $gray-300 !important;
+}
+.gray-400 {
+    color: $gray-400 !important;
+}
+.gray-500 {
+    color: $gray-500 !important;
+}
+.gray-600 {
+    color: $gray-600 !important;
+}
+.gray-700 {
+    color: $gray-700 !important;
+}
+.gray-800 {
+    color: $gray-800 !important;
+}
+.gray-900 {
+    color: $gray-900 !important;
+}
+.black {
+    color: $black !important;
+}
+
+// Height and Width view 
+$view_height: (
+    0: 0,
+    25: 25vh,
+    50: 50vh,
+    75: 75vh,
+    100: 100vh
+);
+
+$view_width: (
+    0: 0,
+    25: 25vw,
+    50: 50vw,
+    75: 75vw,
+    100: 100vw
+);
+
+@each $height in map-keys($map: $view_height) {
+    .vh-#{$height} {
+        height: map-get($map: $view_height, $key: $height) !important;
+    }
+}
+
+@each $width in map-keys($map: $view_width) {
+    .vw-#{$width} {
+        height: map-get($map: $view_width, $key: $width) !important;
+    }
+}

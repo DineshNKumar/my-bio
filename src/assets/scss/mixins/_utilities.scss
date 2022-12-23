@@ -1,0 +1,153 @@
+$sides: (
+    x,
+    y,
+    all,
+    top,
+    bottom,
+    left,
+    right
+);
+
+// Padding and Margin
+@each $space in map-keys($map: $spaces) {
+    @each $side in $sides {
+        @if $side ==all {
+            .p-#{$space} {
+                padding: map-get($map: $spaces, $key: $space) map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else if $side ==x {
+            .px-#{$space} {
+                padding-left: map-get($map: $spaces, $key: $space) !important;
+                padding-right: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else if $side ==y {
+            .py-#{$space} {
+                padding-top: map-get($map: $spaces, $key: $space) !important;
+                padding-bottom: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else {
+            .p#{str-slice($side, 0, 1)}-#{$space} {
+                padding-#{$side}: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+    }
+
+    @each $side in $sides {
+        @if $side ==all {
+            .m-#{$space} {
+                margin: map-get($map: $spaces, $key: $space) map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else if $side ==x {
+            .mx-#{$space} {
+                margin-left: map-get($map: $spaces, $key: $space) !important;
+                margin-right: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else if $side ==y {
+            .my-#{$space} {
+                margin-top: map-get($map: $spaces, $key: $space) !important;
+                margin-bottom: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+
+        @else {
+            .m#{str-slice($side, 0, 1)}-#{$space} {
+                margin-#{$side}: map-get($map: $spaces, $key: $space) !important;
+            }
+        }
+    }
+
+    .h-#{$space} {
+        height: map-get($map: $spaces, $key: $space) !important;
+    }
+    .w-#{$space} {
+        width: map-get($map: $spaces, $key: $space) !important;
+    }
+    .gap-#{$space} {
+        gap: map-get($map: $spaces, $key: $space) !important;
+    }
+}
+
+// Display variables
+$aligns: (
+    center,
+    start,
+    end,
+    space-between,
+    space-evenly,
+    baseline
+);
+
+$flexDirection: (row, row-reverse, column, column-reverse);
+
+.flex {
+    display: flex !important;
+}
+
+@each $direc in $flexDirection {
+    .flex-#{$direc} {
+        flex-direction: #{$direc};
+    }
+}
+
+@each $align in $aligns {
+    .justify-content-#{$align} {
+        justify-content: #{$align};
+    }
+
+    .align-items-#{$align} {
+        align-items: #{$align}
+    }
+}
+
+// ** Positions
+$position: (
+    absolute,
+    fixed,
+    relative,
+    static,
+    sticky
+);
+
+$position-aligns: (
+    0: 0,
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 32px,
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%
+);
+
+@each $pos in $position {
+    .#{$pos} {
+        position: $pos;
+    }
+}
+
+@each $pos-align in map-keys($map: $position-aligns) {
+    .top-#{$pos-align} {
+        top: map-get($map: $position-aligns, $key: $pos-align) !important;
+    }
+    .left-#{$pos-align} {
+        left: map-get($map: $position-aligns, $key: $pos-align) !important;
+    }
+    .right-#{$pos-align} {
+        right: map-get($map: $position-aligns, $key: $pos-align) !important;
+    }
+    .bottom-#{$pos-align} {
+        bottom: map-get($map: $position-aligns, $key: $pos-align) !important;
+    }
+}
