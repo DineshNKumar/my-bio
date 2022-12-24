@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ContactmeService {
-  API_KEY = '';
-
   constructor(private http: HttpClient) {}
 
   sendMail(name: string, email: string, message: string, project: string) {
@@ -214,6 +212,7 @@ export class ContactmeService {
       },
       {
         headers: {
+          'content-type': 'application/json',
           'api-key':
             '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',
         },
