@@ -10,4 +10,5 @@ body {
  }
 #home, #about, #qualifications, #skills, #contactme {
     scroll-behavior: smooth;
+    scroll-margin-block-start: 110px;
 }

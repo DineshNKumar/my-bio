@@ -38,6 +38,8 @@ footer {
 
 // Header 
 header {
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    position: fixed ;
     color: $text-color;
     img {
         align-self: center;
