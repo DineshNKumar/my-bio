@@ -39,11 +39,9 @@ footer {
 // Header 
 header {
     color: $text-color;
-    p {
-        margin-bottom: 0;
-        font-size: larger;
-        font-weight: 600;
-    }
+    img {
+        align-self: center;
+    } 
     ul {
         list-style: none;
         li {

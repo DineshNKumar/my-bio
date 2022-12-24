@@ -1,5 +1,6 @@
 main {
     color: $text-color;
+    overflow: hidden;
 
     // ** Common Classess
     .title {
@@ -32,8 +33,12 @@ main {
             padding: 0;
 
             span {
-                color: $gray-500;
+
                 cursor: pointer;
+
+                a {
+                    color: $gray-500;
+                }
 
                 svg {
                     height: 22px;
@@ -62,7 +67,7 @@ main {
         }
 
         p.name {
-            font-size: $title-size + 10px;
+            font-size: $title-size + 5px;
             font-weight: 600;
         }
 
@@ -136,8 +141,6 @@ main {
                         margin-bottom: 0;
                     }
                 }
-
-
             }
         }
     }
@@ -265,8 +268,13 @@ main {
                     padding: 10px;
                     background-color: rgba($color: $primary, $alpha: 0.1);
 
+
+
                     input,
                     textarea {
+                        color: #0c7a04;
+                        font-weight: 500;
+                        font-stretch: condensed;
                         background-color: rgba($color: $primary, $alpha: 0);
                     }
 
@@ -280,7 +288,6 @@ main {
                     textarea {
                         border: none;
                         font-family: inherit;
-                        font-weight: bold;
 
                         &:focus {
                             outline: none;
@@ -298,7 +305,6 @@ main {
                         display: flex;
                         flex-direction: column;
                         width: 50%;
-                        margin-left: 5px;
                         overflow: hidden;
                     }
                 }
@@ -307,4 +313,3 @@ main {
         }
     }
 }
-

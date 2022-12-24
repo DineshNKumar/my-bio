@@ -72,8 +72,10 @@
           Your Data Successfully Sent!
         </p>
 
-        <button class="btn" type="submit" [disabled]="submitted">
-          Send <fa-icon [icon]="sendIcon"></fa-icon>
+        <button class="btn flex" type="submit" [disabled]="submitted">
+          <span *ngIf="isSending !== true; else elseBlock">Send</span>
+          <ng-template #elseBlock>Sending...</ng-template>
+          <fa-icon [icon]="sendIcon"></fa-icon>
         </button>
       </form>
     </section>

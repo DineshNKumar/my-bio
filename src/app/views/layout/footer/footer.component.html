@@ -14,7 +14,7 @@
           <li (click)="scrollFunc('about')">About</li>
         </ul>
       </section>
-      <section>
+      <section class="">
         <span
           ><a href="https://www.github.com/DineshNKumar" target="_blank"
             ><fa-icon [icon]="github"></fa-icon></a
@@ -23,13 +23,11 @@
           ><a href="https://www.linkedin.com/in/dineshkumar0510" target="_blank"
             ><fa-icon [icon]="linkedIn"></fa-icon> </a
         ></span>
-        <div *ngIf="isMobile === true; else elseBlock">
-          <span>
-            <a href="whatsapp://send?text=Hi, Dinesh" target="_blank"
-              ><fa-icon [icon]="whatsapp"></fa-icon
-            ></a>
-          </span>
-        </div>
+        <span *ngIf="isMobile === true; else elseBlock">
+          <a href="whatsapp://send?text=Hi, Dinesh" target="_blank"
+            ><fa-icon [icon]="whatsapp"></fa-icon
+          ></a>
+        </span>
         <ng-template #elseBlock>
           <span>
             <a

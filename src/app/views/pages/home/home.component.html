@@ -1,22 +1,46 @@
 <app-header></app-header>
 
-
 <main id="home" class="w-100 flex justify-content-center">
   <div class="w-default">
-
     <!-- Banner -->
     <div class="mt-8 overflow-hidden home-content">
-      <section class="pr-4" >
+      <section class="pr-4">
         <section class="social-icons mb-4">
-          <span><fa-icon [icon]="linkedIn"></fa-icon></span>
-          <span><fa-icon [icon]="github"></fa-icon></span>
-          <span><fa-icon [icon]="whatsapp"></fa-icon></span>
+          <span>
+            <a
+              href="https://www.linkedin.com/in/dineshkumar0510"
+              target="_blank"
+              ><fa-icon [icon]="linkedIn"></fa-icon>
+            </a>
+          </span>
+          <span>
+            <a href="https://www.github.com/DineshNKumar" target="_blank"
+              ><fa-icon [icon]="github"></fa-icon>
+            </a>
+          </span>
+          <span *ngIf="isMobile === true; else elseBlock">
+            <a href="whatsapp://send?text=Hi, Dinesh" target="_blank"
+              ><fa-icon [icon]="whatsapp"></fa-icon
+            ></a>
+          </span>
+          <ng-template #elseBlock>
+            <span>
+              <a
+                href="https://web.whatsapp.com/send?text=Hi, Dinesh"
+                target="_blank"
+                ><fa-icon [icon]="whatsapp"></fa-icon>
+              </a>
+            </span>
+          </ng-template>
         </section>
 
         <p class="name my-0" style="line-height: 0.7">Hi, I'm Dinesh</p>
         <p>Full Stack Developer.</p>
         <article>
-          <p class="para" style="word-spacing: 4px; line-height: 1.5; text-align: justify;">
+          <p
+            class="para"
+            style="word-spacing: 4px; line-height: 1.5; text-align: justify"
+          >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Good exeprience in
             <abbr title="MongoDB, Express, Angular, Node JS"><b>MEAN</b></abbr>
             &
@@ -28,14 +52,12 @@
             backend.), <b>NestJS</b>(For backend only.)
           </p>
         </article>
-        <button class="btn">Contact Me <fa-icon [icon]="contactMe"></fa-icon></button>
+        <button class="btn" (click)="scrollFunc('contactme')">
+          Contact Me <fa-icon [icon]="contactMe"></fa-icon>
+        </button>
       </section>
       <section>
-        <img
-          src="/assets/images/dinesh.png"
-          alt="My Image"
-          class="w-100"
-        />
+        <img src="/assets/images/dinesh.png" alt="My Image" class="w-100" />
       </section>
     </div>
 
@@ -54,4 +76,3 @@
 </main>
 
 <app-footer></app-footer>
-

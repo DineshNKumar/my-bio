@@ -24,6 +24,7 @@ export class ContactmeComponent implements OnInit {
   submitted = false;
   isError = false;
   isSuccess = false;
+  isSending = false;
 
   constructor(private services: ContactmeService, fb: FormBuilder) {
     this.form = fb.group({
@@ -44,16 +45,29 @@ export class ContactmeComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    this.isSending = true;
 
     this.isError = Object.keys(this.f).some((key) => this.f[key].errors);
     if (!this.isError) {
       const { email, name, message, project } = this.form.value;
-      this.services.sendMail(name, email, message, project).subscribe(() => {
-        this.isSuccess = true;
-        this.submitted = false;
-        this.isError = false;
-        this.form.reset();
-      });
+      this.services.sendMail(name, email, message, project).subscribe({
+        next: (x) => {
+          console.log('Observer got a next value: ' + x)
+        },
+        error: (err: Error) => {
+          this.isError = true;
+          this.isSuccess = false;
+          this.isSending = false;
+          this.submitted = false;
+        },
+        complete: () => {
+          this.isSuccess = true;
+          this.isError = false;
+          this.isSending = false;
+          this.submitted = false;
+          this.form.reset();
+        },
+      })
     }
   }
 }
