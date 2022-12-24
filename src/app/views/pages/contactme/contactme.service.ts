@@ -5,8 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ContactmeService {
-  API_KEY =
-    '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';
+  API_KEY = '';
 
   constructor(private http: HttpClient) {}
 
@@ -78,7 +77,8 @@ export class ContactmeService {
       },
       {
         headers: {
-          'api-key': this.API_KEY,
+          'api-key':
+            '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',
         },
       }
     );
