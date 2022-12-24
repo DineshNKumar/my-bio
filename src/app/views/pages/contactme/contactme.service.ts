@@ -25,60 +25,197 @@ export class ContactmeService {
         ],
         subject: `Hello, from ${name}(${email})`,
         htmlContent: `
-        <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta name="x-apple-disable-message-reformatting">
-	<title></title>
-	<!--[if mso]>
-	<noscript>
-		<xml>
-			<o:OfficeDocumentSettings>
-				<o:PixelsPerInch>96</o:PixelsPerInch>
-			</o:OfficeDocumentSettings>
-		</xml>
-	</noscript>
-	<![endif]-->
-	<style>
-		table, td, div, h1, p {font-family: Arial, sans-serif;}
-	</style>
-</head>
-<body style="margin:0;padding:0;">
-	<table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
-		<tr>
-			<td align="center" style="padding:0;">
-				<table role="presentation" style="border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;">
-					<tr>
-						<td align="center" style="padding:40px 0 30px 0;background:#70bbd9;">
-							<img src="https://assets.codepen.io/210284/h1.png" alt="" width="300" style="height:auto;display:block;" />
-						</td>
-					</tr>
-					<tr>
-						<td style="padding:36px 30px 42px 30px;">
-							<table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
-								<tr>
-									<td style="padding:0 0 36px 0;color:#153643;">
-										<h1 style="font-size:24px;margin:0 0 20px 0;font-family:Arial,sans-serif;">Hello, ${name}</h1>
-										<p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                      PROJECT NAME: ${project}
-                    </p>
-                    <p style="margin:0 0 12px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;"> DESCRIPTION:  ${message} </p>
-									</td>
-							  </tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-</body>
+		<!-- Free to use, HTML email template designed & built by FullSphere. Learn more about us at www.fullsphere.co.uk -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+
+    <!-- Your title goes here -->
+    <title>Newsletter</title>
+    <!-- End title -->
+
+    <!-- Start stylesheet -->
+    <style type="text/css">
+      a,a[href],a:hover, a:link, a:visited {
+        /* This is the link colour */
+        text-decoration: none!important;
+        color: #0000EE;
+      }
+      .link {
+        text-decoration: underline!important;
+      }
+      p, p:visited {
+        /* Fallback paragraph style */
+        font-size:15px;
+        line-height:24px;
+        font-family:'Helvetica', Arial, sans-serif;
+        font-weight:300;
+        text-decoration:none;
+        color: #000000;
+      }
+      h1 {
+        /* Fallback heading style */
+        font-size:22px;
+        line-height:24px;
+        font-family:'Helvetica', Arial, sans-serif;
+        font-weight:normal;
+        text-decoration:none;
+        color: #000000;
+      }
+      .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%;}
+      .ExternalClass {width: 100%;}
+    </style>
+    <!-- End stylesheet -->
+  </head>
+
+  <!-- You can change background colour here -->
+  <body
+    style="text-align: center; margin: 0; padding-top: 10px; padding-bottom: 10px; padding-left: 0; padding-right: 0; -webkit-text-size-adjust: 100%;background-color: #f2f4f6; color: #000000"
+    align="center"
+  >
+    <!-- Fallback force center content -->
+    <div style="text-align: center;">
+      <!-- Start container for logo -->
+      <table
+        align="center"
+        style="text-align: center; vertical-align: top; width: 600px; max-width: 600px; background-color: #ffffff;"
+        width="600"
+      >
+        <tbody>
+          <tr>
+            <td
+              style="width: 596px; vertical-align: top; padding-left: 0; padding-right: 0; padding-top: 15px; padding-bottom: 15px;"
+              width="596"
+            >
+              <!-- Your logo is here -->
+              <img
+                style="width: 100px; max-width: 100px; height: 50px; max-height: 50px; text-align: center; color: #ffffff;"
+                alt="Logo"
+                src="https://logos.textgiraffe.com/logos/logo-name/Dinesh-designstyle-friday-m.png"
+                align="center"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End container for logo -->
+
+      <!-- Hero image -->
+      <img
+        style="width: 600px; max-width: 600px; max-height: 400px; text-align: center;"
+        alt="Hero image"
+        src="https://viame.ae/wp-content/uploads/2019/09/How-to-Establish-a-Better-Call-Centre-1-1024x743.png"
+        align="center"
+      />
+      <!-- Hero image -->
+
+      <!-- Start single column section -->
+      <table
+        align="center"
+        style="text-align: center; vertical-align: top; width: 600px; max-width: 600px; background-color: #ffffff;"
+        width="600"
+      >
+        <tbody>
+          <tr>
+            <td
+              style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 40px;"
+              width="596"
+            >
+              <h1
+                style="font-size: 20px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 600; text-decoration: none; color: #000000;"
+              >
+                Project(By ${name}) - ${project}
+              </h1>
+
+              <p
+                style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;"
+              >
+                Description - ${message}
+              </p>
+
+              <p
+                style="font-size: 15px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #919293;"
+              >
+                Sent by - ${email}
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Start footer -->
+      <table
+        align="center"
+        style="text-align: center; vertical-align: top; width: 600px; max-width: 600px; background-color: #000000;"
+        width="600"
+      >
+        <tbody>
+          <tr>
+            <td
+              style="width: 596px; vertical-align: top; padding-left: 30px; padding-right: 30px; padding-top: 30px; padding-bottom: 30px;"
+              width="596"
+            >
+              <!-- Your inverted logo is here -->
+              <img
+                style="width: 100px; max-width: 100px; height: 60px; max-height: 50px; text-align: center; color: #ffffff;"
+                alt="Logo"
+                src="https://logos.textgiraffe.com/logos/logo-name/Dinesh-designstyle-friday-m.png"
+                align="center"
+                width="40"
+                height="40"
+              />
+
+              <p
+                style="font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;"
+              >
+                Agra, UP(283105), India
+              </p>
+
+              <p
+                style="margin-bottom: 0; font-size: 13px; line-height: 24px; font-family: 'Helvetica', Arial, sans-serif; font-weight: 400; text-decoration: none; color: #ffffff;"
+              >
+                <a
+                  target="_blank"
+                  style="text-decoration: underline; color: #ffffff;"
+                  href="https://dineshkumar-bio.vercel.app/"
+                >
+                  My Bio Website <u>Link</u>
+                </a>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
+	
         `,
       },
       {
         headers: {
           'api-key':
-            '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',
+            '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',
         },
       }
     );

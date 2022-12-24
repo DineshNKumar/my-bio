@@ -5,10 +5,6 @@
   <div class="form">
     <section class="text-center">
       <div>
-        <h3><fa-icon [icon]="phone"></fa-icon> Call me</h3>
-        <p>8171957605</p>
-      </div>
-      <div>
         <h3><fa-icon [icon]="emailIcon"></fa-icon> Email</h3>
         <p>dnkumar0510@gmail.com</p>
       </div>
@@ -57,12 +53,21 @@
           >
           </textarea>
         </div>
+
+        <p
+          [ngStyle]="{ display: isFormError ? 'block' : 'none' }"
+          class="mb-0"
+          style="color: #f72585; font-size: 12px"
+        >
+         Please check all fields if anyone has invalid value. 
+        </p>
+
         <p
           [ngStyle]="{ display: isError ? 'block' : 'none' }"
           class="mb-0"
           style="color: #f72585; font-size: 12px"
         >
-          Please fill all Required Fields
+          Something went wrong
         </p>
         <p
           [ngStyle]="{ display: isSuccess ? 'block' : 'none' }"
@@ -81,5 +86,3 @@
     </section>
   </div>
 </div>
-
-

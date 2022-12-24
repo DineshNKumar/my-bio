@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope, faPaperPlane } from '@fortawesome/free-regular-svg-icons';
 import { ContactmeService } from './contactme.service';
 import {
@@ -15,7 +15,6 @@ import {
   styleUrls: ['./contactme.component.scss'],
 })
 export class ContactmeComponent implements OnInit {
-  phone = faPhone;
   emailIcon = faEnvelope;
   locationIcon = faLocationDot;
   sendIcon = faPaperPlane;
@@ -23,6 +22,7 @@ export class ContactmeComponent implements OnInit {
   form: FormGroup;
   submitted = false;
   isError = false;
+  isFormError = false;
   isSuccess = false;
   isSending = false;
 
@@ -47,12 +47,12 @@ export class ContactmeComponent implements OnInit {
     this.submitted = true;
     this.isSending = true;
 
-    this.isError = Object.keys(this.f).some((key) => this.f[key].errors);
-    if (!this.isError) {
+    this.isFormError = Object.keys(this.f).some((key) => this.f[key].errors);
+    if (!this.isFormError) {
       const { email, name, message, project } = this.form.value;
       this.services.sendMail(name, email, message, project).subscribe({
         next: (x) => {
-          console.log('Observer got a next value: ' + x)
+          this.isFormError = false;
         },
         error: (err: Error) => {
           this.isError = true;
