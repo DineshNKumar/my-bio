@@ -9,7 +9,7 @@ export class ContactmeService {
 
   constructor(private http: HttpClient) {
     this.apiKey =
-      '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';
+      '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';
     console.log('Service loaded');
   }
 
