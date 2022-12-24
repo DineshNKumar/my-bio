@@ -258,6 +258,10 @@ main {
         .form {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+        
+            section:first-child {
+                text-align: center;
+            }
 
             form {
                 div {
@@ -282,6 +286,7 @@ main {
                         margin-bottom: 0;
                         font-size: 14px;
                         margin-bottom: 10px;
+                        text-align: start;
                     }
 
                     input,

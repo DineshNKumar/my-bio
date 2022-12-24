@@ -3,19 +3,12 @@
   <p class="sub-title">Get in touch with me</p>
 
   <div class="form">
-    <section class="text-center">
-      <div>
-        <h3 class="text-center">
-          <fa-icon [icon]="emailIcon"></fa-icon> Email
-        </h3>
-        <p class="text-center">dnkumar0510@gmail.com</p>
-      </div>
-      <div>
-        <h3 class="text-center">
-          <fa-icon [icon]="locationIcon"></fa-icon> Location
-        </h3>
-        <p class="text-center">Agra, UP(283105)</p>
-      </div>
+    <section>
+      <h3 class="mb-0"><fa-icon [icon]="emailIcon"></fa-icon> Email</h3>
+      <p class="mt-0">dnkumar0510@gmail.com</p>
+
+      <h3 class="my-0"><fa-icon [icon]="locationIcon"></fa-icon> Location</h3>
+      <p class="mt-0">Agra, UP(283105)</p>
     </section>
     <section>
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
