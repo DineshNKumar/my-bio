@@ -11,7 +11,7 @@ export class ContactmeService {
 
   sendMail(name: string, email: string, message: string, project: string) {
     return this.http.post(
-      '/api/sendmail',
+      'https://bio-server-ns4u.vercel.app/sendmail',
       {
         sender: {
           name,
@@ -215,9 +215,7 @@ export class ContactmeService {
       {
         headers: {
           'content-type': 'application/json',
-          'Access-Control-Allow-Origin': "*"
-        },
-        
+        },        
       }
     );
   }
