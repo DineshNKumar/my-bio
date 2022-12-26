@@ -5,17 +5,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ContactmeService {
-  apiKey: string;
-
   constructor(private http: HttpClient) {
-    this.apiKey =
-      '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';
     console.log('Service loaded');
   }
 
   sendMail(name: string, email: string, message: string, project: string) {
     return this.http.post(
-      'https://bio-server-ns4u.vercel.app/sendmail',
+      '/api/sendmail',
       {
         sender: {
           name,
@@ -219,7 +215,9 @@ export class ContactmeService {
       {
         headers: {
           'content-type': 'application/json',
+          'Access-Control-Allow-Origin': "*"
         },
+        
       }
     );
   }

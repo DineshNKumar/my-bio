@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://bio-server-ns4u.vercel.app",
+    "secure": true,
+    "logLevel": "debug"
+  }
+}
