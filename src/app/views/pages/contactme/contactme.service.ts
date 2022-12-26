@@ -15,7 +15,7 @@ export class ContactmeService {
 
   sendMail(name: string, email: string, message: string, project: string) {
     return this.http.post(
-      'https://api.sendinblue.com/v3/smtp/email',
+      'https://bio-server-ns4u.vercel.app/sendmail',
       {
         sender: {
           name,
@@ -219,7 +219,6 @@ export class ContactmeService {
       {
         headers: {
           'content-type': 'application/json',
-          'api-key': this.apiKey,
         },
       }
     );

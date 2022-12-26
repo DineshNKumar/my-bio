@@ -22,7 +22,6 @@ export class ContactmeComponent implements OnInit {
   form: FormGroup;
   submitted = false;
   isError = false;
-  isFormError = false;
   isSuccess = false;
   isSending = false;
 
@@ -47,12 +46,12 @@ export class ContactmeComponent implements OnInit {
     this.submitted = true;
     this.isSending = true;
 
-    this.isFormError = Object.keys(this.f).some((key) => this.f[key].errors);
-    if (!this.isFormError) {
+    const error = Object.keys(this.f).some((key) => this.f[key].errors);
+    if (!error) {
       const { email, name, message, project } = this.form.value;
       this.services.sendMail(name, email, message, project).subscribe({
         next: (x) => {
-          this.isFormError = false;
+          console.log("working...")
         },
         error: (err: Error) => {
           this.isError = true;

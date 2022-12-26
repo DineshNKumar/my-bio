@@ -13,7 +13,7 @@
     <section>
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div>
-          <section [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+          <section>
             <label for="name">Name</label>
             <input
               type="text"
@@ -23,12 +23,12 @@
               formControlName="name"
             />
           </section>
-          <section [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+          <section>
             <label for="email">Email</label>
             <input type="email" id="email" required formControlName="email" />
           </section>
         </div>
-        <div [ngClass]="{ 'is-invalid': submitted && f['project'].errors }">
+        <div>
           <label for="project">Project</label>
           <input
             type="text"
@@ -38,7 +38,7 @@
             formControlName="project"
           />
         </div>
-        <div [ngClass]="{ 'is-invalid': submitted && f['message'].errors }">
+        <div>
           <label for="message">Message</label>
           <textarea
             rows="5"
@@ -50,15 +50,6 @@
           >
           </textarea>
         </div>
-
-        <p
-          [ngStyle]="{ display: isFormError ? 'block' : 'none' }"
-          class="mb-0"
-          style="color: #f72585; font-size: 12px"
-        >
-          Please check all fields if anyone has invalid value.
-        </p>
-
         <p
           [ngStyle]="{ display: isError ? 'block' : 'none' }"
           class="mb-0"
