@@ -49,6 +49,7 @@ export class ContactmeComponent implements OnInit {
     const error = Object.keys(this.f).some((key) => this.f[key].errors);
     if (!error) {
       const { email, name, message, project } = this.form.value;
+      console.log(this.form.value)
       this.services.sendMail(name, email, message, project).subscribe({
         next: (x) => {
           console.log("working... sodfi")
